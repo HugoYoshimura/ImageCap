@@ -2,35 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.usjt.arqdesis.imagecap.MainActivity">
+    android:orientation="vertical"
+    tools:context="br.usjt.arqdesis.imgcap.MainActivity">
+
 
     <ImageView
         android:id="@+id/imagem1"
-        android:src="@drawable/camera"
         android:layout_width="400dp"
-        android:layout_height="300dp" />
+        android:layout_height="300dp"
+        android:src="@drawable/camera" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/bt1"
-            android:onClick="daGaleria"
-            android:text="Galeria"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:onClick="daGaleria"
+            android:text="Galeria" />
+
         <Button
             android:id="@+id/bt2"
-            android:onClick="daCamera"
-            android:text="Camera"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:onClick="daCamera"
+            android:text="Camera" />
 
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/listFiltrosLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>
